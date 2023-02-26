@@ -1,3 +1,12 @@
+/*
+ * Author: Michael Tenkorang
+ * Title: Agent-Based Simulation
+ * Date: 02/26/2023
+ * CS 231
+ * Section B
+ * Landscape.java
+ */
+
 import java.lang.Math;
 import java.awt.Graphics;
 
@@ -18,12 +27,18 @@ public class Landscape {
     }
 
     public void updateAgents() {
+        /*
+         * Update the agents on the screen
+         */
         for (Agent a : agents) {
             a.updateState(this);
         }
     }
 
     public void draw(Graphics g) {
+        /*
+         * Draw the agents on the window
+         */
         for (Agent a : agents) {
             a.draw(g);
         }
@@ -59,6 +74,9 @@ public class Landscape {
     }
 
     public LinkedList<Agent> getNeighbors(double x0, double y0, double radius) {
+        /*
+         * Gets the Neighbors of an agent
+         */
         LinkedList<Agent> res = new LinkedList<>();
         for (Agent a : agents) {
             if ((a.x == x0) && (a.y == y0)) {

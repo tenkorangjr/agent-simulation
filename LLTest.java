@@ -1,3 +1,12 @@
+/*
+ * Author: Michael Tenkorang
+ * Title: Agent-Based Simulation
+ * Date: 02/26/2023
+ * CS 231
+ * Section B
+ * LLTest.java
+ */
+
 public class LLTest {
 
     public static void main(String[] args) {
