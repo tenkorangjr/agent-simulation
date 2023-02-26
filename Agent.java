@@ -12,6 +12,7 @@ import java.awt.Graphics;
 public abstract class Agent {
     double x;
     double y;
+    boolean extension;
 
     public Agent(double x0, double y0) {
         /*
@@ -19,6 +20,7 @@ public abstract class Agent {
          */
         x = x0;
         y = y0;
+        extension = false;
     }
 
     public double getX() {

@@ -12,12 +12,15 @@ import java.awt.Color;
 import java.awt.Component;
 import java.awt.Dimension;
 import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.Random;
 
 import javax.imageio.ImageIO;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
@@ -29,7 +32,7 @@ import javax.swing.JPanel;
 public class LandscapeDisplay {
     protected JFrame win;
     protected Landscape scape;
-    private LandscapePanel canvas;
+    public LandscapePanel canvas;
 
     /**
      * Initializes a display window for a Landscape.
@@ -86,17 +89,40 @@ public class LandscapeDisplay {
      * This inner class provides the panel on which Landscape elements
      * are drawn.
      */
-    private class LandscapePanel extends JPanel {
+    public class LandscapePanel extends JPanel implements ActionListener {
         /**
          * Creates the panel.
          * 
          * @param width  the width of the panel in pixels
          * @param height the height of the panel in pixels
          */
+
+        public JButton btn;
+        public JButton btn1;
+        boolean pause = false;
+        boolean color = false;
+
         public LandscapePanel(int width, int height) {
             super();
+            this.btn = new JButton("Stop");
+            this.btn1 = new JButton("Random Colors");
             this.setPreferredSize(new Dimension(width, height));
             this.setBackground(Color.white);
+            this.add(btn);
+            this.add(btn1);
+
+            btn.addActionListener(this);
+            btn1.addActionListener(this);
+        }
+
+        public void actionPerformed(ActionEvent e) {
+            Object source = e.getSource();
+            if (source.equals(this.btn)) {
+                System.out.println("true");
+                pause = true;
+            } else if (source.equals(this.btn1)) {
+                color = !(color);
+            }
         }
 
         /**

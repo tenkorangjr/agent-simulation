@@ -45,11 +45,15 @@ public class AntiSocialAgent extends Agent {
         /*
          * Draw an agent on landscape
          */
-        if (!moved)
-            g.setColor(new Color(255, 0, 0));
-        else
-            g.setColor(new Color(255, 125, 125));
-
+        if (!extension) {
+            if (!moved)
+                g.setColor(new Color(255, 0, 0));
+            else
+                g.setColor(new Color(255, 125, 125));
+        } else {
+            g.setColor(new Color(randomPicker.nextInt(0, 255), randomPicker.nextInt(0, 255),
+                    randomPicker.nextInt(0, 255)));
+        }
         g.fillOval((int) getX(), (int) getY(), 5, 5);
     }
 
