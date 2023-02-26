@@ -32,12 +32,23 @@ public class Extension {
 
         while (true) {
             if (display.canvas.pause) {
-                break;
+                display.canvas.btn.setText("Play");
+                while (true) {
+                    Thread.sleep(10);
+                    if (!(display.canvas.pause)) {
+                        display.canvas.btn.setText("Pause");
+                        break;
+                    }
+                }
             }
             if (display.canvas.color) {
                 for (Agent a : scape.agents) {
                     a.extension = !(a.extension);
                 }
+                if (scape.agents.get(0).extension)
+                    display.canvas.btn1.setText("Default Colors");
+                else
+                    display.canvas.btn1.setText("Random Colors");
                 display.canvas.color = false;
             }
             Thread.sleep(100);

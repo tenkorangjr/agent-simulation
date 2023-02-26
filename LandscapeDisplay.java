@@ -104,7 +104,7 @@ public class LandscapeDisplay {
 
         public LandscapePanel(int width, int height) {
             super();
-            this.btn = new JButton("Stop");
+            this.btn = new JButton("Pause");
             this.btn1 = new JButton("Random Colors");
             this.setPreferredSize(new Dimension(width, height));
             this.setBackground(Color.white);
@@ -119,7 +119,7 @@ public class LandscapeDisplay {
             Object source = e.getSource();
             if (source.equals(this.btn)) {
                 System.out.println("true");
-                pause = true;
+                pause = !(pause);
             } else if (source.equals(this.btn1)) {
                 color = !(color);
             }
