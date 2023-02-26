@@ -1,3 +1,5 @@
+import java.awt.Graphics;
+
 public abstract class Agent {
     double x;
     double y;

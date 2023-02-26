@@ -4,26 +4,35 @@ import java.util.Iterator;
 public class LinkedList<T> implements Iterable<T> {
 
     private class Node<T> {
+        // Class for the Node
         T data;
         Node<T> next;
 
-        public Node(T item) {
-            data = item;
-            next = null;
-        }
+        // public Node(T item) {
+        // // Node Constructor
+        // data = item;
+        // next = null;
+        // }
 
         public Node(T item, Node<T> next) {
+            // Constructor for node with next
             data = item;
             this.next = next;
         }
 
         public T getData() {
+            /*
+             * Return the data in the Node
+             */
             return data;
         }
 
-        public void setNext(Node<T> newNext) {
-            next = newNext;
-        }
+        // public void setNext(Node<T> newNext) {
+        // /*
+        // * Set the next of the current Node
+        // */
+        // next = newNext;
+        // }
 
         public Node<T> getNext() {
             return next;
