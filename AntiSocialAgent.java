@@ -1,9 +1,9 @@
-public class SocialAgent extends Agent {
+public class AntiSocialAgent extends Agent {
 
     int radius;
     boolean moved;
 
-    public SocialAgent(double x0, double y0, int radius) {
+    public AntiSocialAgent(double x0, double y0, int radius) {
         super(x0, y0);
         this.radius = radius;
     }
