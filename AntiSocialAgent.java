@@ -51,6 +51,7 @@ public class AntiSocialAgent extends Agent {
             else
                 g.setColor(new Color(255, 125, 125));
         } else {
+            // Use random colors when extension field is true
             g.setColor(new Color(randomPicker.nextInt(0, 255), randomPicker.nextInt(0, 255),
                     randomPicker.nextInt(0, 255)));
         }

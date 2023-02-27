@@ -52,6 +52,7 @@ public class SocialAgent extends Agent {
                 g.setColor(new Color(125, 125, 255));
             }
         } else {
+            // Use random colors when extension field is true
             g.setColor(new Color(randomPicker.nextInt(0, 255), randomPicker.nextInt(0, 255),
                     randomPicker.nextInt(0, 255)));
         }

@@ -97,10 +97,10 @@ public class LandscapeDisplay {
          * @param height the height of the panel in pixels
          */
 
-        public JButton btn;
-        public JButton btn1;
-        boolean pause = false;
-        boolean color = false;
+        public JButton btn; // for Pause button
+        public JButton btn1; // for change color button
+        boolean pause = false; // check if pause button has been clicked
+        boolean color = false; // check if random colors button has been clicked
 
         public LandscapePanel(int width, int height) {
             super();
@@ -108,8 +108,8 @@ public class LandscapeDisplay {
             this.btn1 = new JButton("Random Colors");
             this.setPreferredSize(new Dimension(width, height));
             this.setBackground(Color.white);
-            this.add(btn);
-            this.add(btn1);
+            // this.add(btn);
+            // this.add(btn1);
 
             btn.addActionListener(this);
             btn1.addActionListener(this);
@@ -117,10 +117,10 @@ public class LandscapeDisplay {
 
         public void actionPerformed(ActionEvent e) {
             Object source = e.getSource();
-            if (source.equals(this.btn)) {
+            if (source.equals(this.btn)) { // negate the value of pause when the pause button is pressed
                 System.out.println("true");
                 pause = !(pause);
-            } else if (source.equals(this.btn1)) {
+            } else if (source.equals(this.btn1)) { // negate the value of random when the random button is pressed
                 color = !(color);
             }
         }

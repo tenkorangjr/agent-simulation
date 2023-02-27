@@ -12,7 +12,7 @@ import java.awt.Graphics;
 public abstract class Agent {
     double x;
     double y;
-    boolean extension;
+    boolean extension; // for random colors
 
     public Agent(double x0, double y0) {
         /*
@@ -20,7 +20,7 @@ public abstract class Agent {
          */
         x = x0;
         y = y0;
-        extension = false;
+        extension = false; // for random colors
     }
 
     public double getX() {
