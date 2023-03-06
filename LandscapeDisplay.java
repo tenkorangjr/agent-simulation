@@ -108,8 +108,8 @@ public class LandscapeDisplay {
             this.btn1 = new JButton("Random Colors");
             this.setPreferredSize(new Dimension(width, height));
             this.setBackground(Color.white);
-            // this.add(btn);
-            // this.add(btn1);
+            this.add(btn);
+            this.add(btn1);
 
             btn.addActionListener(this);
             btn1.addActionListener(this);
